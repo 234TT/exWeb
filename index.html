@@ -46,6 +46,7 @@
     <footer>
         <p>© 2025 MyBrand. 모든 권리 보유.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 <header>
@@ -53,10 +54,32 @@
     <nav>
         <ul>
             <li><a href="index.html">홈</a></li>
-            <li><a href="#">멤버 소개</a></li>
-            <li><a href="#">S.TW 연락처 (관리자)</a></li>
+            <li><a href="#" id="openCrewModal">크루원 정보</a></li>
+            <li><a href="#" id="openAdminModal">S.TW 연락처 (관리자)</a></li>
         </ul>
     </nav>
+    
+    <!-- 모달 창 -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close closeAdmin">&times;</span>
+            <h2>📞 관리자 정보</h2>
+            <p>아직 관리자가 존재하지 않습니다</p>
+            <p>관리자 정보를 불러올 수 없습니다</p>
+        </div>
+    </div>
+
+    <div id="crewModal" class="modal">
+        <div class="modal-content">
+            <span class="close closeCrew">&times;</span>
+            <h2>👥 크루원 정보</h2>
+            <p>아직 멤버가 없습니다</p>
+            <p>멤버 프로필을 불러올 수 없습니다</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- ✅ JS 파일 연결 -->
+
 </header>
 
 </html>

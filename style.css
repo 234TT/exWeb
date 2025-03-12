@@ -91,3 +91,102 @@ footer {
     color: white;
     font-size: 14px;
 }
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 모달 내부 */
+.modal-content {
+    background-color: hsl(59, 100%, 50%);
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 닫기 버튼 */
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@keyframes blinkBackground {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.7); /* 중간 밝기 */
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* 모달 배경 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: blinkBackground 1s infinite; /* 애니메이션 적용 */
+}
+
+/* 모달 창 깜빡이기 애니메이션 */
+@keyframes blinkModalContent {
+    0% {
+        opacity: 1; /* 모달 창 완전 불투명 */
+    }
+    50% {
+        opacity: 0.5; /* 모달 창 반투명 */
+    }
+    100% {
+        opacity: 1; /* 모달 창 완전 불투명 */
+    }
+}
+
+/* 모달 배경 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경색 */
+}
+
+/* 모달 콘텐츠 (깜빡이게 만들기) */
+.modal-content {
+    background-color: rgb(255, 255, 0);
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    animation: blinkModalContent 1s infinite; /* 애니메이션 적용 */
+}
+
+/* 제목 글자색 변경 */
+.modal-content h2 {
+    color: #3498db; /* 제목 색을 파란색으로 변경 */
+}
+
+/* 일반 텍스트 색상 변경 */
+.modal-content p {
+    color: #2ecc71; /* 일반 텍스트 색을 초록색으로 변경 */
+}
